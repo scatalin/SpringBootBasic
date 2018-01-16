@@ -33,6 +33,8 @@ pipeline {
           }
           steps {
             sh 'mvn -B -DskipTests clean package'
+            input message: 'Finished using the web site? (Click "Proceed" to continue)'
+            sh 'echo yes was clicked'
           }
         }
         stage('Deploy for production') {
@@ -41,6 +43,8 @@ pipeline {
           }
           steps {
             sh 'mvn -B -DskipTests clean install'
+            input message: 'Finished using the web site? (Click "Proceed" to continue)'
+            sh 'echo yes was clicked'
           }
         }
     }
