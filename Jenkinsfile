@@ -27,5 +27,21 @@ pipeline {
                 sh './jenkins/deliver.sh'
             }
         }
+        stage('Deliver for development') {
+          when {
+            branch 'develop'
+          }
+          steps {
+            sh 'mvn -B -DskipTests clean package'
+          }
+        }
+        stage('Deploy for production') {
+          when {
+            branch 'master'
+          }
+          steps {
+            sh 'mvn -B -DskipTests clean install'
+          }
+        }
     }
 }
