@@ -42,7 +42,7 @@ public class HelloControllerIT {
   @Test
   public void getHello() {
     ResponseEntity<String> responseEntity = testRestTemplate.getForEntity(base.toString(), String.class);
-    assertThat(responseEntity.getBody(), equalTo("Greetings from Sprng Boot!"));
+    assertThat(responseEntity.getBody(), equalTo("Greetings from Spring Boot!"));
   }
 
 }
