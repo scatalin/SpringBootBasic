@@ -7,6 +7,11 @@ pipeline {
       }
     }
     stages {
+	stage('Look arround') {
+	    steps {
+		sh 'echo "${BRANCH_NAME}"'
+	    }
+	}
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean install'
