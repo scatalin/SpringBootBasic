@@ -16,7 +16,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <!--the 1.5.9 version that was explained in the tutorial is not working. it throws exception when a request is made-->
     <!--the exception is  java.lang.ClassNotFoundException: org.springframework.web.context.request.async.AsyncRequestTimeoutExceptionava.lang.NoClassDefFoundError: org/springframework/web/context/request/async/AsyncRequestTimeoutException-->
-    <spring-boot-version>1.4.0.RELEASE</spring-boot-version>
+    <spring-boot-version>3.1.9</spring-boot-version>
     <start-class>hello.Application</start-class>
   </properties>
 
